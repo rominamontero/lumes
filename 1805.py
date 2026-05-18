@@ -9,10 +9,10 @@ while True:
     nombre=input("Ingrese el nombre del juego: ")
 
     while True:
-        if len(nombre) >= 5 and " " not in nombre: 
+        if len(nombre) >= 5 and " " not in nombre and nombre.isupper: 
             break
         else:
-            print("Error el nombre no debe tener espacios y debe tener 5 caracteres como minimo")
+            print("Error el nombre no debe tener espacios, debe tener 5 caracteres como minimo y debe estar en MAYUSCULAS")
             nombre=input("Ingrese el nombre del juego: ")
 
     while True:
@@ -41,7 +41,7 @@ while True:
         elif clasificacion =="M":
             contM+=1
             break
-    print(f"Hay {indie} indies, {estudio} de estudio. Solo {cont} son de clasificacion E")
+    print(f"Hay {indie} indies, {estudio} de estudio. Solo {cont} son de clasificacion E, {contA} de clasificacion A y {contM} de clasificacion M")
     continuar=input("Desea continuar S/N:  ")
     if continuar=="N":
         break
